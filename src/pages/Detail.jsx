@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const Detail = () => {
   const [dataDetail, setDataDetail] = useState(null);
   const params = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,13 +25,10 @@ const Detail = () => {
 
   return (
     <div className="app-contaner">
-      {/* {dataDetail.map(el, i) =>{
-
-      <div key={i}>
-          <img />
-          <h3>{el.name}</h3>
+      <div>
+        <img src="" alt={dataDetail.name} />
+        <h3>{dataDetail.name}</h3>
       </div>
-      }} */}
     </div>
   );
 };
